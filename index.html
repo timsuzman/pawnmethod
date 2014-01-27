@@ -7,8 +7,8 @@ body {color:#412408;background-color:#d4c789  }
 td {width: 80px; height:80px; text-align: center;}
 tr.code td {vertical-align: top; height:40px;}
 * {font-family: 'Open Sans', sans-serif;}
-.white {color: #fffbdd;}
-.black {color: #221405;}
+.white {color: #fffbdd;text-shadow:#412408 1px 1px 1px;}
+.black {color: #221405;text-shadow:#fffbdd 1px 1px 1px;}
 /*.even {}
 tr:nth-child(odd) td:nth-child(even) {
   background: #000;
@@ -16,16 +16,18 @@ tr:nth-child(odd) td:nth-child(even) {
 .board {border-collapse: collapse;}
 /*.board td {border:solid 1px #221405;}*/
 .board tr.even td:nth-child(even) {
-  background: #221405;
+  background: #644420;
 }
 .board tr.odd td:nth-child(odd) {
-  background: #221405;
+  background: #644420;
 }
-.bottom-board {
+.outer {
   width:640px;
   border-style: double;
   border-width: 8px;
   border-color: #221405;
+}
+.outer.bottom{
   border-top: hidden;
 }
 </style>
@@ -58,22 +60,60 @@ The Pawn Method is a simpler, faster way of setting up a starting position for F
 
 First, randomly shuffle the white pawns in their starting row.
 <br><br>
-<div class="bottom-board">
+<div class="outer bottom">
   <table class="board " style="font-size: 24px">
     <tr class="white even" style="font-size:56px"><td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> </tr>
     <tr class="white odd" style="font-size:56px"><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
   </table>
 </div>
 <br>
-Look under each pawn. If the pawn says <b>Q</b>, <b>B</b>, or <b>N</b>, place a Queen, Bishop, or Knight in the corresponding starting square. If the pawn says <b><sup>K</sup>/<sub>R</sub></b>, ignore it for now (we'll fill in the King and Rooks at the end).
+Look under each pawn. If the pawn says <b>Q</b>, <b>B</b>, or <b>N</b>, place a Queen, Bishop, or Knight in the corresponding starting square. If the pawn says <b><sup>K</sup>/<sub>R</sub></b>, leave it blank for now (we'll fill in the King and Rooks at the end).
 <br><br>
-<div class="bottom-board">
+<div class="outer bottom">
   <table class="board " style="font-size: 24px">
     <tr class="white even" style="font-size:56px"><td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> </tr>
     <tr class="white odd" style="font-size:56px"><td>&#9819;  </td> <td>&#9821;</td> <td></td> <td>&#9821;</td> <td></td> <td>&#9822;</td> <td>&#9822;</td> <td></td> </tr>
   </table>
 </div>
 <br>
-<b>IF</b> the two bishops landed on the same color square (as they did above), we need to move one of them. Randomly select a single black pawn and look at the bottom. If it starts with <b>L</b>, we'll move the Left bishop, and if it starts with <b>R</b>, we'll move the Right bishop. The number on the black pawn tells you how many squares to the right to move that bishop (wrapping around the board if necessary). Swap the Bishop with whatever was on its new square.
+<div style="padding-left:20px;border:solid 1px #221405; padding: 20px">
+  <b>IF the two bishops landed on the same color square</b> (as they did above), randomly select a single black pawn and look at the bottom. The <b>L</b> or <b>R</b> tells you whether to move the Left or Right bishop, and the number tells you how many squares to the right to move that bishop (wrapping around the board if necessary). Swap the Bishop with whatever was on its new square.
+
+  <!--  If it starts with <b>L</b>, we'll move the Left bishop, and if it starts with <b>R</b>, we'll move the Right bishop. The number on the black pawn tells you how many squares to the right to move that bishop (wrapping around the board if necessary). Swap the Bishop with whatever was on its new square. -->
+  <br><br>
+  For example, if we picked the <b>R3</b> pawn, we'd end up with:
+  <br><br>
+  <div class="outer bottom">
+    <table class="board " style="font-size: 24px">
+      <tr class="white even" style="font-size:56px"><td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> </tr>
+      <tr class="white odd" style="font-size:56px"><td>&#9819;  </td> <td>&#9821;</td> <td></td> <td>&#9822;</td> <td></td> <td>&#9822;</td> <td>&#9821;</td> <td></td> </tr>
+    </table>
+  </div>
+</div>
+<br><br>
+Finally, fill the 3 empty squares with <b>Rook, King, Rook,</b> in that order.
+<br><br>
+<div class="outer bottom">
+  <table class="board " style="font-size: 24px">
+    <tr class="white even" style="font-size:56px"><td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> </tr>
+    <tr class="white odd" style="font-size:56px"><td>&#9819;  </td> <td>&#9821;</td> <td>&#9820;</td> <td>&#9822;</td> <td>&#9818;</td> <td>&#9822;</td> <td>&#9821;</td> <td>&#9820;</td> </tr>
+  </table>
+</div>
+<br><br>
+Mirror the black pieces and you're done!
+<br><br>
+
+<div class="outer">
+  <table class="board " style="font-size: 24px">
+    <tr class="black even" style="font-size:56px"><td>&#9819;  </td> <td>&#9821;</td> <td>&#9820;</td> <td>&#9822;</td> <td>&#9818;</td> <td>&#9822;</td> <td>&#9821;</td> <td>&#9820;</td> </tr>
+    <tr class="black odd" style="font-size:56px"><td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> </tr>
+    <tr class="even" style="font-size:56px"><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+    <tr class="odd" style="font-size:56px"><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+    <tr class="even" style="font-size:56px"><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+    <tr class="odd" style="font-size:56px"><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+    <tr class="white even" style="font-size:56px"><td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> </tr>
+    <tr class="white odd" style="font-size:56px"><td>&#9819;  </td> <td>&#9821;</td> <td>&#9820;</td> <td>&#9822;</td> <td>&#9818;</td> <td>&#9822;</td> <td>&#9821;</td> <td>&#9820;</td> </tr>
+  </table>
+</div>
 <br><br><br><br>
 </div>
