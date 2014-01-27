@@ -22,6 +22,7 @@ tr:nth-child(odd) td:nth-child(even) {
   background: #644420;
 }
 .outer {
+  margin: 20px 0px;
   width:640px;
   border-style: double;
   border-width: 8px;
@@ -59,30 +60,28 @@ The Pawn Method is a simpler, faster way of setting up a starting position for F
 <h2>How to use the Pawn Method</h2>
 
 First, randomly shuffle the white pawns in their starting row.
-<br><br>
 <div class="outer bottom">
   <table class="board " style="font-size: 24px">
     <tr class="white even" style="font-size:56px"><td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> </tr>
     <tr class="white odd" style="font-size:56px"><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
   </table>
 </div>
-<br>
+
 Look under each pawn. If the pawn says <b>Q</b>, <b>B</b>, or <b>N</b>, place a Queen, Bishop, or Knight in the corresponding starting square. If the pawn says <b><sup>K</sup>/<sub>R</sub></b>, leave it blank for now (we'll fill in the King and Rooks at the end).
-<br><br>
+
 <div class="outer bottom">
   <table class="board " style="font-size: 24px">
     <tr class="white even" style="font-size:56px"><td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> </tr>
     <tr class="white odd" style="font-size:56px"><td>&#9819;  </td> <td>&#9821;</td> <td></td> <td>&#9821;</td> <td></td> <td>&#9822;</td> <td>&#9822;</td> <td></td> </tr>
   </table>
 </div>
-<br>
-<div style="padding-left:20px;border:solid 1px #221405; padding: 20px">
+
+<div style="padding:20px 20px 0px 20px;border:solid 1px #221405;margin-bottom:20px ">
   <b>IF the two bishops landed on the same color square</b> (as they did above), randomly select a single black pawn and look at the bottom. The <b>L</b> or <b>R</b> tells you whether to move the Left or Right bishop, and the number tells you how many squares to the right to move that bishop (wrapping around the board if necessary). Swap the Bishop with whatever was on its new square.
 
-  <!--  If it starts with <b>L</b>, we'll move the Left bishop, and if it starts with <b>R</b>, we'll move the Right bishop. The number on the black pawn tells you how many squares to the right to move that bishop (wrapping around the board if necessary). Swap the Bishop with whatever was on its new square. -->
   <br><br>
   For example, if we picked the <b>R3</b> pawn, we'd end up with:
-  <br><br>
+
   <div class="outer bottom">
     <table class="board " style="font-size: 24px">
       <tr class="white even" style="font-size:56px"><td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> </tr>
@@ -90,18 +89,17 @@ Look under each pawn. If the pawn says <b>Q</b>, <b>B</b>, or <b>N</b>, place a 
     </table>
   </div>
 </div>
-<br><br>
+
 Finally, fill the 3 empty squares with <b>Rook, King, Rook,</b> in that order.
-<br><br>
+
 <div class="outer bottom">
   <table class="board " style="font-size: 24px">
     <tr class="white even" style="font-size:56px"><td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> </tr>
     <tr class="white odd" style="font-size:56px"><td>&#9819;  </td> <td>&#9821;</td> <td>&#9820;</td> <td>&#9822;</td> <td>&#9818;</td> <td>&#9822;</td> <td>&#9821;</td> <td>&#9820;</td> </tr>
   </table>
 </div>
-<br><br>
+
 Mirror the black pieces and you're done!
-<br><br>
 
 <div class="outer">
   <table class="board " style="font-size: 24px">
