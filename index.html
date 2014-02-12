@@ -2,7 +2,9 @@
 
 <style>
 body {color:#412408;background-color:#D4C289  }
-
+/**, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }*/
 #container { width: 700px;margin:30px auto; /*background-color: white*/}
 td {width: 80px; height:80px; text-align: center;position: relative;}
 tr.code td {vertical-align: top; height:40px;}
@@ -46,7 +48,6 @@ td .numbering {
   font-size: 14px;
 }
 </style>
-
 <div id="container">
 
 <h1>Using the Pawn Method to set up a Fischer Random position</h1>
@@ -90,7 +91,7 @@ Look under each pawn. If the pawn says <b>Q</b>, <b>B</b>, or <b>N</b>, place a 
   </table>
 </div>
 
-<div style="width: 500px; padding:40px 50px 20px 50px;border:solid 1px #221405;margin:40px auto">
+<div style="width: 560px; padding:40px 50px 20px 50px;border-left:solid 1px #63360f;margin:40px 0px; background-color:rgba(100, 68, 32, 0.2)">
   <b>IF the two bishops landed on the same color square:</b>
   <br><br>
   Randomly select a single black pawn and look at the bottom. The <b>L</b> or <b>R</b> tells you whether to move the <b>L</b>eft or <b>R</b>ight bishop. The number (1-4) tells you which number square of the opposite color to move the bishop to. Move the Bishop to that new square, swapping it with the piece already there if there is one.
