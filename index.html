@@ -2,6 +2,8 @@
 
 <style>
 body {color:#412408;background-color:#D4C289  }
+h1 {font-size: 24px;}
+h2 {font-size:22px;}
 /**, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }*/
@@ -11,6 +13,7 @@ tr.code td {vertical-align: top; height:40px;}
 * {font-family: 'Open Sans', sans-serif;}
 .white {color: #fffbdd;text-shadow:#412408 1px 1px 1px;}
 .black {color: #221405;text-shadow:#fffbdd 1px 1px 1px;}
+.blackText {color: #1A1005;text-shadow:#7A673D 1px 1px 1px;}
 /*.even {}
 tr:nth-child(odd) td:nth-child(even) {
   background: #000;
@@ -48,6 +51,7 @@ td .numbering {
   font-size: 14px;
 }
 </style>
+
 <div id="container">
 
 <h1>Using the Pawn Method to set up a Fischer Random position</h1>
@@ -74,15 +78,15 @@ The Pawn Method is a simpler, faster way of setting up a starting position for <
 
 <h2>How to use the Pawn Method</h2>
 
-First, randomly shuffle the white pawns in their starting row.
+Begin by randomly shuffling the <b class="white">white pawns</b> in their starting row.
 <div class="outer bottom">
   <table class="board " style="font-size: 24px">
     <tr class="white even" style="font-size:56px"><td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> </tr>
     <tr class="white odd" style="font-size:56px"><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
   </table>
 </div>
-
-Look under each pawn. If the pawn says <b>Q</b>, <b>B</b>, or <b>N</b>, place a Queen, Bishop, or Knight in the corresponding starting square. If the pawn says <b><sup>K</sup>/<sub>R</sub></b>, leave it blank for now (we'll fill in the King and Rooks at the end).
+<br>
+Look under each pawn. If the pawn says <b class="white">Q</b>, <b class="white">B</b>, or <b class="white">N</b>, place a <span class="white">Queen</span>, <span class="white">Bishop</span>, or <span class="white">Knight</span> in the corresponding starting square. If the pawn says <b class="white"><sup>K</sup>/<sub>R</sub></b>, leave it blank for now (we'll fill in the King and Rooks at the end).
 
 <div class="outer bottom">
   <table class="board " style="font-size: 24px">
@@ -91,10 +95,14 @@ Look under each pawn. If the pawn says <b>Q</b>, <b>B</b>, or <b>N</b>, place a 
   </table>
 </div>
 
-<div style="width: 560px; padding:40px 50px 20px 50px;border-left:solid 1px #63360f;margin:40px 0px; background-color:rgba(100, 68, 32, 0.2)">
-  <b>IF the two bishops landed on the same color square:</b>
-  <br><br>
-  Randomly select a single black pawn and look at the bottom. The <b>L</b> or <b>R</b> tells you whether to move the <b>L</b>eft or <b>R</b>ight bishop. The number (1-4) tells you which number square of the opposite color to move the bishop to. Move the Bishop to that new square, swapping it with the piece already there if there is one.
+<div style="width: 560px; padding:20px 50px 20px 50px;border-left:solid 1px #63360f;margin:40px 0px; background-color:rgba(100, 68, 32, 0.2)">
+  <h3>Did the two Bishops land on the same color square?</h3>
+  If so, randomly select <b class="blackText">one black pawn</b> and look at the bottom. <br>
+  <ul style="margin-left:0px;padding-left:1.2em ">
+    <li>The <b>L</b> or <b>R</b> tells you whether to move the <b>L</b>eft or <b>R</b>ight bishop.</li>
+    <li>The number <b>(1-4)</b> tells you which number square of the opposite color to move the bishop to.</li>
+  </ul>
+  Move the Bishop to that new square, swapping it with the piece already there if there is one.
 
   <br><br>
   For example, if we picked the <b>R4</b> pawn above, we'd move the <b>R</b>ight bishop to the <b>4</b>th black square and end up with:
@@ -107,7 +115,7 @@ Look under each pawn. If the pawn says <b>Q</b>, <b>B</b>, or <b>N</b>, place a 
   </div>
 </div>
 
-Finally, fill the 3 empty squares with <b>Rook, King, Rook,</b> in that order.
+Fill the 3 empty squares with <b class="white">Rook</b>, <b class="white">King</b>, <b class="white">Rook</b>, in that order.
 
 <div class="outer bottom">
   <table class="board " style="font-size: 24px">
@@ -115,8 +123,8 @@ Finally, fill the 3 empty squares with <b>Rook, King, Rook,</b> in that order.
     <tr class="white odd" style="font-size:56px"><td>&#9819;  </td> <td>&#9821;</td> <td>&#9820;</td> <td>&#9822;</td> <td>&#9818;</td> <td>&#9822;</td> <td>&#9821;</td> <td>&#9820;</td> </tr>
   </table>
 </div>
-
-Mirror the black pieces and you're done!
+<br>
+Mirror the <span class="blackText">black pieces</span> and you're done!
 
 <div class="outer">
   <table class="board " style="font-size: 24px">
@@ -130,5 +138,8 @@ Mirror the black pieces and you're done!
     <tr class="white odd" style="font-size:56px"><td>&#9819;  </td> <td>&#9821;</td> <td>&#9820;</td> <td>&#9822;</td> <td>&#9818;</td> <td>&#9822;</td> <td>&#9821;</td> <td>&#9820;</td> </tr>
   </table>
 </div>
+
+<h2 style="text-align:center">Have a good game!</h2>
+
 <br><br><br><br>
 </div>
