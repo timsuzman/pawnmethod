@@ -97,11 +97,36 @@ Look under each pawn. If the pawn says <b class="white">Q</b>, <b class="white">
 
 <div style="width: 560px; padding:20px 50px 20px 50px;border-left:solid 1px #63360f;margin:40px 0px; background-color:rgba(100, 68, 32, 0.2)">
   <h3>Did the two Bishops land on the same color square?</h3>
-  If so, we need to move one to the opposite color. Randomly select <b class="blackText">one black pawn</b> and look at the bottom. <br>
+  If so, we need to move one to the opposite color. This part looks confusing at first, but only takes a few seconds in practice.<br><br> Randomly select <b class="blackText">one black pawn</b> and look at the bottom. <br>
   <ul style="margin-left:0px;padding-left:1.2em ">
-    <li>The <b>L</b> or <b>R</b> tells you whether to move the <b>L</b>eft or <b>R</b>ight bishop.</li>
-    <li>The number <b>(1-4)</b> tells you which number square of the opposite color to move the bishop to.</li>
+    <li>The <b>L</b> or <b>R</b> tells you whether to move the <b>L</b>eft or <b>R</b>ight bishop.
+
+      <div class="outer bottom medium">
+        <table class="board " style="font-size: 24px">
+          <tr class="white even" style="font-size:36px"><td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> </tr>
+          <tr class="white odd" style="font-size:36px"><td>&#9819;</td> <td>&#9821;<div class="numbering white">L</div></td> <td></td> <td>&#9821;<div class="numbering white">R</div></td> <td></td> <td>&#9822;</td> <td>&#9822;</td> <td></td> </tr>
+        </table>
+      </div>
+    </li>
+
+    <li>The number <b>(1-4)</b> tells you which number square of the opposite color to move the bishop to.
+
+      <div class="outer bottom medium">
+        <table class="board " style="font-size: 24px">
+          <tr class="white even" style="font-size:36px"><td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> </tr>
+          <tr class="white odd" style="font-size:36px"><td>&#9819;<div class="numbering white">1</div></td> <td>&#9821;</td> <td><div class="numbering white">2</div></td> <td>&#9821;</td> <td><div class="numbering white">3</div></td> <td>&#9822;</td> <td>&#9822;<div class="numbering white">4</div></td> <td></td> </tr>
+        </table>
+      </div>
+    </li>
   </ul>
+
+ <!--  <div class="outer bottom medium">
+    <table class="board " style="font-size: 24px">
+      <tr class="white even" style="font-size:36px"><td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> <td>&#9823;</td> </tr>
+      <tr class="white odd" style="font-size:36px"><td>&#9819;<div class="numbering white">1</div></td> <td>&#9821;<div class="numbering white">L</div></td> <td><div class="numbering white">2</div></td> <td>&#9821;<div class="numbering white">R</div></td> <td><div class="numbering white">3</div></td> <td>&#9822;</td> <td>&#9822;<div class="numbering white">4</div></td> <td></td> </tr>
+    </table>
+  </div> -->
+
   Move the Bishop to that new square, swapping it with the piece already there if there is one.
 
   <br><br>
@@ -139,7 +164,7 @@ Mirror the <span class="blackText">black pieces</span> and you're done!
   </table>
 </div>
 
-<h2 style="text-align:center">Have a good game!</h2>
+<h2 style="text-align:center;margin-top:30px">Have a good game!</h2>
 
 <br><br><br><br>
 </div>
